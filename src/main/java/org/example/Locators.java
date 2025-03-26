@@ -10,9 +10,11 @@ import java.time.Duration;
 public class Locators {
     public static void main(String[] arg) {
 
+        //Open Browser
         WebDriver driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
+        //Login dengan salah email
         driver.findElement(By.id("inputUsername")).sendKeys("gogon");
         driver.findElement(By.name("inputPassword")).sendKeys("OKEdsf");
         driver.findElement(By.className("signInBtn")).click();
@@ -33,6 +35,11 @@ public class Locators {
         driver.findElement(By.xpath("//form/input[3]")).sendKeys("081231233");
         driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
         System.out.println(driver.findElement(By.cssSelector("form p")).getText());
+        // Login ulang
+        driver.findElement(By.className("go-to-login-btn")).click();
+        driver.findElement(By.id("inputUsername")).sendKeys("gogon");
+        driver.findElement(By.name("inputPassword")).sendKeys("OKEdsf");
+        driver.findElement(By.className("signInBtn")).click();
 
     }
 }
