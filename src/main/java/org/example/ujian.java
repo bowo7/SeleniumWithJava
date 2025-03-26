@@ -3,6 +3,8 @@ package org.example;
 public class ujian {
     public static void main(String[] arg)
     {
+
+
 //    Create an Array:
 //    Create a new array called numbers to store 5 numerical values of your choice (they can be whole numbers or decimals).
 //
