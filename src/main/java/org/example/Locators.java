@@ -20,13 +20,19 @@ public class Locators {
         // Ex = //input[@placeholder='Username']
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
         driver.findElement(By.linkText("Forgot your password?")).click();
+        try {
+            Thread.sleep(5000); // Jeda selama 5 detik
+        } catch (InterruptedException e) {
+            e.printStackTrace(); // Menampilkan error jika terjadi
+        };
         driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Jono");
-        driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("jono@gmail.com");
+        WebElement Email =  driver.findElement(By.cssSelector("input[placeholder='Email']"));
+        Email.sendKeys("jono@gmail.com");
         // driver.findElement(By.cssSelector("input[placeholder='Email']")).clear();
         //Cara Select XPath yang rapi
-        WebElement InputPhoneNumber =  driver.findElement(By.xpath("input[placeholder='Phone Number']"));
-        InputPhoneNumber.sendKeys("0856344");
-        driver.findElement(By.className("Reset")).click();
+        driver.findElement(By.xpath("//form/input[3]")).sendKeys("081231233");
+        driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
+        System.out.println(driver.findElement(By.cssSelector("form p")).getText());
 
     }
 }
