@@ -37,9 +37,11 @@ public class Locators {
         System.out.println(driver.findElement(By.cssSelector("form p")).getText());
         // Login ulang
         driver.findElement(By.className("go-to-login-btn")).click();
-        driver.findElement(By.id("inputUsername")).sendKeys("gogon");
-        driver.findElement(By.name("inputPassword")).sendKeys("OKEdsf");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.findElement(By.id("inputUsername")).sendKeys("rahul");
+        driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
         driver.findElement(By.className("signInBtn")).click();
-
+        String message = driver.findElement(By.xpath("//p[contains(text(),'You are successfully logged in.')]")).getText();
+        System.out.println(message);
     }
 }
