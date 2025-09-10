@@ -28,18 +28,18 @@ public class Helper {
 
     public static String getText(WebElement element) {
         return element.getText();
-    }
-    public static WebElement waitForElementVisible(WebDriver driver, By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-    public static <Select> void selectByText(WebElement element, String text) {
-        Select select = new Select(element);
-        select.selectByVisibleText(text);
-    }
-    public static void takeScreenshot(WebDriver driver, String fileName) throws IOException {
-        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(src, new File("./screenshots/" + fileName + ".png"));
+//    }
+//    public static WebElement waitForElementVisible(WebDriver driver, By locator, int timeout) {
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+//    }
+//    public static <Select> void selectByText(WebElement element, String text) {
+//        Select select = new Select(element);
+//        select.selectByVisibleText(text);
+//    }
+//    public static void takeScreenshot(WebDriver driver, String fileName) throws IOException {
+//        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        FileUtils.copyFile(src, new File("./screenshots/" + fileName + ".png"));
     }
 
 
