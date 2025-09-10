@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.time.Duration;
 
 public class Locators {
@@ -40,8 +39,15 @@ public class Locators {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.id("inputUsername")).sendKeys("rahul");
         driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+        try {
+            Thread.sleep(5000); // Jeda selama 5 detik
+        } catch (InterruptedException e) {
+            e.printStackTrace(); // Menampilkan error jika terjadi
+        };
         driver.findElement(By.className("signInBtn")).click();
+        driver.findElement(By.xpath("//input[@id='chkboxOne']")).click();
         String message = driver.findElement(By.xpath("//p[contains(text(),'You are successfully logged in.')]")).getText();
         System.out.println(message);
+        driver.close();
     }
 }

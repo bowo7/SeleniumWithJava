@@ -12,12 +12,12 @@ public class CoreJavaBrushUp1 {
         System.out.println(myNum);
         System.out.println(website);
         // Array simplenya 'arr' adalah array yang bernama arr dan 'new' adalah penampungnya atau indexing mulai dari index 0
-        int[] arr = new int[5];
-        arr[0] = 1;
-        arr[1] = 2;
-        arr[2] = 4;
-        arr[3] = 5;
-        arr[4] = 6;
+        int [] arr = new int[5];
+                arr[0] = 1;
+                arr[1] = 2;
+                arr[2] = 4;
+                arr[3] = 5;
+                arr[4] = 6;
 
         //sama saja, hanya saja ini versi simplenya, tergantung penggunaanya nanti
         int[] arr2 = {1,2,4,5,6};

@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CoreJavaBrushup2 {
-    public static void main(String[] arg) {
+     {
 
         // Sekarang bagaimana caranya print array dengan perkalian di kali 2
         int[] arr2 = {1, 2, 3, 4, 5, 6, 7, 8, 20, 120};

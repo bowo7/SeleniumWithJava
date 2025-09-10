@@ -3,11 +3,10 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Assert;
 
 import java.time.Duration;
 
-public class Locators2 {
+public class userLoc {
     public static void main(String[] arg) throws InterruptedException {
         Locators locators = new Locators();
 //        locators.
