@@ -19,9 +19,10 @@ public class UpdateDropdown {
         // driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
         driver.findElement(By.xpath("//td[@data-month='4' and @data-year='2019']/a[text()='15']\n")).click();
 //
-        System.out.println(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+        Assert.assertFalse(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).click();
         System.out.println(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
+        Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         System.out.println(driver.findElements(By.cssSelector("input[type$='checkbox']")).size());
 
 
