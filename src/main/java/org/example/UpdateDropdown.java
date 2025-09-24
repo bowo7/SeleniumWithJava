@@ -10,6 +10,8 @@ public class UpdateDropdown {
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/dropdownsPractise/"); // URL yang di tuju
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_1")).click();
+        driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
         driver.findElement(By.xpath("//input[@id='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("//a[@value='BLR']")).click();
@@ -24,7 +26,7 @@ public class UpdateDropdown {
         System.out.println(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         System.out.println(driver.findElements(By.cssSelector("input[type$='checkbox']")).size());
-
+        driver.close();
 
         // Kita akan coba klik 4 kali di Adult-testID-plus-one-cta menggunakan perulangan
 
