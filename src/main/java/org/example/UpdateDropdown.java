@@ -27,7 +27,6 @@ public class UpdateDropdown {
         Assert.assertTrue(driver.findElement(By.id("ctl00_mainContent_chk_SeniorCitizenDiscount")).isSelected());
         System.out.println(driver.findElements(By.cssSelector("input[type$='checkbox']")).size());
         driver.close();
-
         // Kita akan coba klik 4 kali di Adult-testID-plus-one-cta menggunakan perulangan
 
         // INI MENGGUNAKAN WHILE
