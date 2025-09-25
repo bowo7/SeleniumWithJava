@@ -23,6 +23,7 @@ public class validateEnableElement {
         System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
         rbtnRoundTrip.click();
         System.out.println(driver.findElement(By.id("Div1")).getDomAttribute("style"));
+        // Logik untuk menentukan benar atau tidak element Div1 enable
         if ((driver.findElement(By.id("Div1")).getDomAttribute("style").contains("1")))
         {
             System.out.println("it's Enables!");
@@ -30,9 +31,7 @@ public class validateEnableElement {
         } else {
             Assert.assertTrue(false);
         }
-
         driver.close();
-
 
     }
 }
